@@ -4,7 +4,7 @@ const auth = require("../middleware/auth")
 
 const route = require("express").Router()
 
-route.get("/", [auth, isAdmin], getEvent)
+route.get("/", getEvent)
 route.post("/", [auth, isAdmin], addEvent)
 route.put("/:id", [auth, isAdmin], updateEvent)
 route.delete("/:id", [auth, isAdmin], deleteEvent)
