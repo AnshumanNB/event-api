@@ -4,7 +4,7 @@ const isSuperAdmin = require("../middleware/superAdmin")
 
 const route = require("express").Router()
 
-route.get("/", [auth, isSuperAdmin], getClub)
+route.get("/", getClub)
 route.post("/", [auth, isSuperAdmin], postClub)
 route.put("/:id", [auth, isSuperAdmin], updateClub)
 route.delete("/:id", [auth, isSuperAdmin], deleteClub)
